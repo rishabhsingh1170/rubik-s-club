@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "PT Serif", serif;
+}
+
+:root{
+    --color1 : #eeaf828e;
+    --color2: #eeaf82;
+    --color3 : #171616;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color2); 
+    border-radius: 10px;
+  }
+.wrapper{
+    /* padding: 1rem; */
+    position: relative;
+    background: #eeaf82;
+    height: 100vh;
+}
+
+nav{
+    /* border: 2px solid red; */
+    width: 98%;
+    margin: 1rem;
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 0 2rem;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 1px 1px 3px white;
+    position: fixed;
+    z-index: 100;
+}
+
+.manit-logo a{
+    /* border: 2px solid green; */
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 1rem;
+    font-size: 3vw;
+    color: var(--color2);
+}
+
+.manit-logo img{
+    width: 4vw;
+    border-radius: 15px;
+}
+
+.nav-links{
+    /* border: 2px solid yellow; */
+    display: flex;
+    font-size: 1.3vw;
+    gap: 3vw;
+    padding-right: 4vw;
+    font-weight: bold;
+    color: var(--color1);
+    
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: var(--color1);
+    border-bottom: 1px solid #0000;
+    transition-duration:  0.5s;
+}
+
+.nav-links a:hover{
+    color:var(--color2);
+    border-bottom: 1px solid var(--color2);
+    box-shadow: 0px 1px 1px var(--color2);
+}
+
+main{
+    padding-top: 100px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .container{
+    border: none;
+    width: 70%;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color3);
+    color: var(--color2);
+    border-radius: 25px;
+    box-shadow: 0 0 10px var(--color3);
+}
+
+main .container h1{
+    font-size: 3vw;
+    text-decoration: underline;
+    margin: 1vw;
+    text-shadow: 0 0 3px ;
+}
+
+main .container h3{
+    font-size:1.4vw;
+    margin-bottom: 10px;
+}
+
+main .container p{
+    line-height: 2vw;
+    margin-bottom: 22px;
+    font-size: 1.1vw;
+    text-align: justify;
+}
+
+main .container button{
+    margin: 20px;
+    font-size: 2vw;
+    padding: 10px;
+    background-color: var(--color2);
+    color: var(--color3);
+    border-radius: 15px;
+    box-shadow: 0 0 5px var(--color2);
+    border: none;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+main .container button:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px var(--color2);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer{
+    /* border: none; */
+    color: var(--color2);
+    padding-top: 30px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    background: linear-gradient( var(--color2) 0% ,var(--color3) 50%);
+}
+
+footer .cont-info{
+    font-size: 1rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 800px){
+    nav{
+        margin:2px;
+    }
+
+    .manit-logo{
+        margin-left: -15px;
+    }
+    .manit-logo img{
+        width: 8vw;
+    }
+
+    .manit-logo a{
+        font-size: 5vw;
+        gap: 1vw;
+    }
+
+    .nav-links{
+        font-size: 1.9vw;
+        gap: 1vw;
+        margin-right: -30px;
+    } 
+
+    main .container{
+        width: 90%;
+    }
+    main .container p{
+        line-height: 4vw;
+        margin-bottom: 22px;
+        font-size: 3vw;
+    }
+
+    main .container h1{
+        font-size: 6vw;
+        text-decoration: underline;
+        margin: 2vw;
+    }
+
+    main .container h3{
+        font-size:4vw;
+    }
+
+    main .container button{
+        margin: 10px;
+        font-size: 6vw;
+        padding: 15px;
+    }
+
+    footer .cont-info{
+        font-size: 1.5vw;
+    }
+
+    footer h3{
+        font-size: 2vw;
+    }
+
+    footer h1{
+        font-size: 3vw;
+    }
+}
+
+#preloader{
+    background: var(--color3) url(./images/preloader-img.gif) no-repeat center;
+    background-size: 8%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#preloader img{
+    width: 50px;
+    height: 50px;
+}
